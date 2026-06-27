@@ -1,0 +1,56 @@
+import type { AppSettings, PayslipData } from "./types";
+
+/** Données fictives pour l'aperçu du template (onglet Design). */
+export const PAYSLIP_PREVIEW_SAMPLE: PayslipData = {
+  id: "preview",
+  employeeId: "preview",
+  period: "2026-06",
+  periodLabel: "Juin 2026",
+  generatedAt: new Date().toISOString(),
+  currency: "USD",
+  situation: {
+    matricule: "EMP-0042",
+    fullName: "Marie Kabongo",
+    department: "Finance",
+    position: "Comptable senior",
+    grade: "7",
+    cnssNumber: "CNSS-123456",
+    contractType: "CDI",
+    hireDate: "2021-03-15",
+    dependents: 2,
+    leaveRemaining: 18,
+    status: "Actif",
+    pointageSummary: "P: 22 · M: 0 · CA: 2 · F: 2",
+  },
+  payroll: {
+    baseSalary: 420,
+    grossSalary: 520,
+    taxableBase: 378,
+    cnssEmployee: 26.04,
+    ipr: 42.5,
+    netSalary: 451.46,
+    cnssEmployer: 67.7,
+    inpp: 12.6,
+    onem: 0.84,
+    totalEmployerCost: 149.58,
+    allowancesTotal: 0,
+    housingAllowance: 75,
+    transportAllowance: 25,
+    totalGains: 520,
+    totalLegalDeductions: 68.54,
+    totalRemunerationImposable: 420,
+    baseCnss: 420,
+    baseIpr: 393.96,
+    iprBeforeAbatement: 45,
+    iprAbatementPercent: 0.04,
+    unionContribution: 0,
+    otherDeductions: 0,
+    familyAllowanceEstimate: 0,
+    currency: "USD",
+  },
+};
+
+export const PAYSLIP_PREVIEW_SETTINGS: Pick<AppSettings, "companyName" | "companyAddress"> = {
+  companyName: "Entreprise Demo SARL",
+  companyAddress: "Kinshasa, RDC",
+};
